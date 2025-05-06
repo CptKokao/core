@@ -12,11 +12,12 @@ export function AppHeader({
   variant: "auth" | "private" | "public";
 }) {
   const isProfile = variant !== "auth";
+  console.log(isProfile);
   return (
     <Layout
       logo={<Logo />}
       nav={<MainNav />}
-      profile={isProfile && <Profile />}
+      profile={<Profile />}
       actions={
         <ToggleTheme />
         // <Button size={"icon"} variant={"ghost"} asChild>

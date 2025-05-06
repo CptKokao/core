@@ -10,7 +10,7 @@ import { Menu } from "lucide-react";
 export function Layout({
   logo,
   nav,
-  //   profile,
+  profile,
   actions,
 }: {
   logo?: React.ReactNode;
@@ -40,7 +40,7 @@ export function Layout({
           <div className="hidden md:flex">{nav}</div>
           <div className="flex flex-1 items-center justify-end space-x-3 ">
             {actions}
-            {/* {profile} */}
+            {profile}
           </div>
         </div>
       </div>
