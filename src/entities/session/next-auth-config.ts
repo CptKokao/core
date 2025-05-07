@@ -7,6 +7,11 @@ import { compact } from "lodash-es";
 import EmailProvider from "next-auth/providers/email";
 
 export const nextAuthConfig: AuthOptions = {
+  pages: {
+    signIn: "/auth/sign-in",
+    newUser: "/auth/new-user",
+    verifyRequest: "/auth/verify-request",
+  },
   adapter: PrismaAdapter(dbClient),
   providers: compact([
     EmailProvider({

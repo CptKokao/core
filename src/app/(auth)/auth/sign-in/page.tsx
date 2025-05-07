@@ -1,8 +1,8 @@
-// import { SignInForm } from "@/features/auth/sign-in-form.server";
+import { SignInForm } from "@/features/auth/sign-in-form.server";
 import { Card, CardContent, CardHeader } from "@/shared/ui/card";
 import React from "react";
-// import { Suspense } from "react";
-// import { Spinner } from "@/shared/ui/spinner";
+import { Suspense } from "react";
+import { Spinner } from "@/shared/ui/spinner";
 
 export default function AuthenticationPage() {
   return (
@@ -16,10 +16,9 @@ export default function AuthenticationPage() {
             </h1>
           </CardHeader>
           <CardContent className="grid gap-4">
-            {/* <Suspense fallback={<Spinner />}>
+            <Suspense fallback={<Spinner />}>
               <SignInForm />
-            </Suspense> */}
-            SignInForm
+            </Suspense>
           </CardContent>
         </Card>
       </div>

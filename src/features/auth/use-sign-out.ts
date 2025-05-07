@@ -5,7 +5,7 @@ export function useSignOut() {
   const queryClient = useQueryClient();
 
   const mutation = useMutation({
-    mutationFn: () => signOut({ callbackUrl: "/" }),
+    mutationFn: () => signOut({ callbackUrl: "/map" }),
     onSuccess: async () => {
       queryClient.clear();
     },
