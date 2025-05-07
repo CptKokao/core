@@ -1,6 +1,6 @@
 "use client";
 
-import { AppSessionProvider } from "@/entities/session/app-session-privider";
+import { AppSessionProvider } from "@/entities/session/app-session-provider";
 // import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 // import { useState } from "react";
 import { ThemeProvider } from "@/features/theme/theme-provider";
