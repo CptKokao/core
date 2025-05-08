@@ -1,7 +1,10 @@
 "use client";
 
-import { useAppSession } from "@/entities/session/use-app-session";
-import { getProfileDisplayName, ProfileAvatar } from "@/entities/user/profile";
+import {
+  getProfileDisplayName,
+  ProfileAvatar,
+} from "@/entities/session/profile";
+import { useAppSession } from "@/entities/session/sessionClient";
 import { SignInButton } from "@/features/auth/sign-in-button";
 import { useSignOut } from "@/features/auth/use-sign-out";
 import { Button } from "@/shared/ui/button";
@@ -21,7 +24,6 @@ import Link from "next/link";
 export function Profile() {
   const session = useAppSession();
   const { signOut, isPending: isLoadingSignOut } = useSignOut();
-
   if (session.status === "loading") {
     return <Skeleton className="w-8 h-8 rounded-full" />;
   }
@@ -31,7 +33,7 @@ export function Profile() {
   }
 
   const user = session?.data?.user;
-
+  console.log(user);
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

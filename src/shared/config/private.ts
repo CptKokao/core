@@ -4,7 +4,7 @@ const privateConfigSchema = z.object({
   GITHUB_ID: z.string().optional(),
   GITHUB_SECRET: z.string().optional(),
 
-  //   ADMIN_EMAILS: z.string().optional(),
+  ADMIN_EMAILS: z.string().optional(),
   //   TEST_EMAIL_TOKEN: z.string().optional(),
 
   EMAIL_SERVER_USER: z.string(),

@@ -1,5 +1,3 @@
-import { SharedSession, SharedUser } from "../../domain/user";
-
 export type UserId = string;
 export type Role = "ADMIN" | "USER";
 
@@ -8,7 +6,7 @@ export const ROLES: Record<Role, Role> = {
   USER: "USER",
 };
 
-export type SharedUser = {
+export type UserEntity = {
   id: UserId;
   email: string;
   role: Role;
@@ -17,7 +15,7 @@ export type SharedUser = {
   image?: string | null;
 };
 
-export type SharedSession = {
+export type SessionEntity = {
   user: {
     id: UserId;
     email: string;
@@ -28,10 +26,10 @@ export type SharedSession = {
   expires: string;
 };
 
-declare module "next-auth" {
-  interface Session {
-    user: SharedSession["user"];
-  }
+// Projetions
 
-  // interface User extends SharedUser {}
-}
+export type Profile = {
+  email?: string;
+  name?: string | null;
+  image?: string | null;
+};
